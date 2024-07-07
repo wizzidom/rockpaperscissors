@@ -2,6 +2,7 @@
     margin: 0;
 }
 .welcome{
+    text-align: center;
     padding: 20px;
     color:lime;
     background: black;
