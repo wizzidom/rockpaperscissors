@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+}
+.welcome{
+    padding: 20px;
+    color:lime;
+    background: black;
+}
+.play{
+    margin-top: 20px;
+    padding : 20px;
+   
+    text-align: center;
+}
+button{
+    border: 3px solid lime;
+    padding: 10px;
+    text-decoration: none;
+    background-color: black;
+    color: lime;
+}
+.game{
+    background: url(solo.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh
+}
