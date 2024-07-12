@@ -1,6 +1,13 @@
-var humanScore = 0;
-var computerscore = 0;
-var start = document.getElementById('start');
+var humanScore = document.getElementById('human');
+var computerscore = document.getElementById('computer')
+humanScore.innerText = 0;
+computerscore.innerText = 0;
+
+function restart(){
+    computerscore.innerText = 0;
+    humanScore.innerText = 0;
+}
+
 
 
 function getComputerChoice(){
@@ -10,63 +17,72 @@ function getComputerChoice(){
     return options[rand];
     
 }
-function getHumanChoice(){
-    choice = prompt("Rock, paper or scissors?").toLowerCase();
-    console.log(choice);
-    return choice;
-
+function play(){
+    if (computerscore.innerText === 5){
+        playGame()
+    }
 }
 
-function playRound(humanChoice, computerChoice){
-
-
-        if (humanChoice === 'rock' && computerChoice === "paper"){
-            alert("You lose this round! Paper beats Rock");
-            computerscore += 1;
+function playGame(choice){
+    const computerChoice = getComputerChoice();
+    if (choice === 'rock' && computerChoice === "paper"){
+        alert("You lose this round! Paper beats Rock");
+        computerscore.innerText = parseInt(computerscore.innerText) +1;
+        if (parseInt(computerscore.innerText) === 5){
+            alert('The computer Wins ');
+            restart()
         }
-        else if(humanChoice === 'paper' && computerChoice === "scissors"){
-            alert("You lose this round! Scissors beats Paper");
-            computerscore += 1;
+      
+    }
+    else if(choice === 'paper' && computerChoice === "scissors"){
+        alert("You lose this round! Scissors beats Paper");
+        computerscore.innerText = parseInt(computerscore.innerText) +1;
+        if (parseInt(computerscore.innerText) === 5){
+            alert('The computer Wins ');
+            restart()
         }
-        else if(humanChoice === 'scissors' && computerChoice === "rock"){
-            alert("You lose this round! Rock beats Scissors");
-            computerscore += 1;
+    }
+    else if(choice === 'scissors' && computerChoice === "rock"){
+        alert("You lose this round! Rock beats Scissors");
+        computerscore.innerText = parseInt(computerscore.innerText) +1;
+        if (parseInt(computerscore.innerText) === 5){
+            alert('The computer Wins ');
+            restart()
         }
-        else if(humanChoice === computerChoice){
-            alert("Its a draw this round");
-            
+    }
+    else if(choice === 'rock' && computerChoice === "scissors"){
+        alert("You win this round! Rock beats Scissors");
+        humanScore.innerText = parseInt(humanScore.innerText) +1;
+        if (parseInt(humanScore.innerText) === 5){
+            alert('You Win  ');
+            restart()
         }
-        else{
-            alert("You win this round")
-            humanScore += 1;
+    
+    }
+    else if(choice === 'scissors' && computerChoice === "paper"){
+        alert("You win this round! Scissors beats Paper");
+        humanScore.innerText = parseInt(humanScore.innerText) +1;
+        if (parseInt(humanScore.innerText) === 5){
+            alert('You Win  ');
+            restart()
+        }
+  
+    }
+    else if(choice === 'paper' && computerChoice === "rock"){
+        alert("You win this round! Paper beats Rock");
+        humanScore.innerText = parseInt(humanScore.innerText) +1;
+        if (parseInt(humanScore.innerText) === 5){
+            alert('You Win');
+            restart()
         }
         
+    }
+    
+    else if(choice === computerChoice){
+        alert("Its a draw this round");
         
-
+    }
+    
 }
-function playGame(){
-   
-    let lives = 5;
-    while (lives > 0) {
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
-        lives -= 1;
-    }
-    console.log(humanScore)
-    console.log(computerscore)
-    console.log(lives);
-    if (humanScore > computerscore){
-        alert("You Win The Game by " + humanScore + " to " +computerscore)
-    }
-    else if(humanScore === computerscore){
-        alert("Its a draw by " + humanScore + " to " +computerscore)
-    }
-    else{
-        alert("Computer Wins The Game by " + computerscore + " to " +humanScore)
- 
-    }
-    }
-
 
 

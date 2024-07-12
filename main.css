@@ -27,3 +27,64 @@ button{
     background-size: cover;
     height: 100vh
 }
+
+.options{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.score{
+    display: flex;
+ 
+   
+}
+.score p{
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    border: 2px solid black;
+    background: black;
+    color: lime;
+    
+}
+h1{
+    color: lime;
+    background: rgb(39, 39, 41);
+    text-align: center;
+}
+.score div{
+    flex: 1;
+    padding: 20px;
+}
+
+.restart{
+    margin-top: 20px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.rock button{
+    width: 250px;
+    height: 200px;
+    background: url(rock.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.paper button{
+    width: 350px;
+    height: 200px;
+    background: url(paper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.scissors button{
+    width: 350px;
+    height: 200px;
+    background: url(scissors.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

@@ -6,17 +6,46 @@
     <title>Rock Paper Scissors</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <script src='main.js' defer></script>
 </head>
 <body>
     <div class="game">
         <h1 class="welcome">
             Welcome to rock, paper, scissors world;
         </h1>
-    
-        <div class="play">
-            <button onclick="playGame()">Start game</button>
+
+     
+        <div class="restart">
+          <button onclick="restart()">Restart</button>
         </div>
+        <div class="options">
+            <div class="rock">
+                <button onclick="playGame('rock')"></button>
+            </div>
+            <div class="paper">
+               <button onclick="playGame('paper')" ></button>
+            </div>
+            <div class="scissors">
+               <button onclick="playGame('scissors')"></button>
+            </div>
+
+        </div>
+    
+    <div class="score">
+      <div>
+        <h1>Human Score </h1>
+        <p id="human"> </p>
+      </div>
+      <div>
+        <h1>Computer Score </h1>
+        <p id="computer"></p>
+      </div>
+           
+            
+    
+       
+    </div>
+        
     </div>
 
 
