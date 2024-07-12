@@ -29,7 +29,7 @@ function playGame(choice){
         alert("You lose this round! Paper beats Rock");
         computerscore.innerText = parseInt(computerscore.innerText) +1;
         if (parseInt(computerscore.innerText) === 5){
-            alert('The computer Wins ');
+            alert('The computer Wins This Game ');
             restart()
         }
       
@@ -38,7 +38,7 @@ function playGame(choice){
         alert("You lose this round! Scissors beats Paper");
         computerscore.innerText = parseInt(computerscore.innerText) +1;
         if (parseInt(computerscore.innerText) === 5){
-            alert('The computer Wins ');
+            alert('The computer Wins This Game');
             restart()
         }
     }
@@ -46,7 +46,7 @@ function playGame(choice){
         alert("You lose this round! Rock beats Scissors");
         computerscore.innerText = parseInt(computerscore.innerText) +1;
         if (parseInt(computerscore.innerText) === 5){
-            alert('The computer Wins ');
+            alert('The computer Wins this Game ');
             restart()
         }
     }
@@ -54,7 +54,7 @@ function playGame(choice){
         alert("You win this round! Rock beats Scissors");
         humanScore.innerText = parseInt(humanScore.innerText) +1;
         if (parseInt(humanScore.innerText) === 5){
-            alert('You Win  ');
+            alert('You Win This Game ');
             restart()
         }
     
@@ -63,7 +63,7 @@ function playGame(choice){
         alert("You win this round! Scissors beats Paper");
         humanScore.innerText = parseInt(humanScore.innerText) +1;
         if (parseInt(humanScore.innerText) === 5){
-            alert('You Win  ');
+            alert('You Win This Game ');
             restart()
         }
   
@@ -72,7 +72,7 @@ function playGame(choice){
         alert("You win this round! Paper beats Rock");
         humanScore.innerText = parseInt(humanScore.innerText) +1;
         if (parseInt(humanScore.innerText) === 5){
-            alert('You Win');
+            alert('You Win This Game');
             restart()
         }
         
